@@ -1,0 +1,21 @@
+{
+  "name": "Die2Nite Map Viewer updater",
+  "version": "1.0",
+  "description": "Die2Nite Map Viewer update ability button",
+  "background_page": "background.html",
+  "icons": {
+    "16": "16x16.png",
+    "48": "48x48.png",
+    "128": "128x128.png"
+  },
+  "permissions": ["http://die2nite.gamerz.org.uk/plugin"],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.die2nite.com/*",
+        "http://die2nite.gamerz.org.uk/*"
+      ],
+      "js": ["script.js"]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<html>
+<script>
+    chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+        if (request.method == "getKey") {
+            sendResponse({key: localStorage.securekey});
+        } else if (request.method == "setKey") {
+            localStorage.securekey = request.key;
+            sendResponse({});
+        } else if (request.method == "postUpdate") {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://die2nite.gamerz.org.uk/plugin?key=" + request.key, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    sendResponse({text: xhr.responseText});
+                }
+            }
+            xhr.send();
+        }
+    });
+</script>
+</html>
