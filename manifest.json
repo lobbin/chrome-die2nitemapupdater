@@ -1,6 +1,6 @@
 {
   "name": "Die2Nite Map Viewer updater",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Die2Nite Map Viewer update ability button",
   "background_page": "background.html",
   "icons": {
