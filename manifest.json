@@ -11,11 +11,12 @@
   "permissions": ["http://die2nite.gamerz.org.uk/plugin"],
   "content_scripts": [
     {
-      "matches": [
-        "http://www.die2nite.com/*",
-        "http://die2nite.gamerz.org.uk/*"
-      ],
-      "js": ["script.js"]
+      "matches": ["http://die2nite.gamerz.org.uk/*"],
+      "js": ["map.js"]
+    }, {
+      "matches": ["http://www.die2nite.com/*"],
+      "js": ["jquery.js", "d2n.js"]
     }
+ 
   ]
 }
